@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from donuts import views
 
 urlpatterns = [
-    path('', include('donuts.urls')),
+    path('', views.index),
+    path('head', views.head),
     path('admin/', admin.site.urls),
 ]
